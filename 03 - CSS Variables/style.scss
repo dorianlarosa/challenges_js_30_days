@@ -1,0 +1,89 @@
+:root {
+    --spacing-image: 0px;
+    --blur-image: 0px;
+    --base-image: #7223d1;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    text-align: center;
+    background: black;
+    color: white;
+    font-family: 'helvetica neue', sans-serif;
+    font-weight: 100;
+    font-size: 50px;
+    padding: 100px 15px 100px 14px;
+}
+
+.hl {
+    color: var(--base-image);
+}
+
+h1 {
+    font-size: 25px;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+
+    @media (min-width: 992px) {
+        font-size: 50px;
+    }
+}
+
+.controls {
+    margin-top: 50px;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+
+
+    @media (min-width: 768px) {
+        flex-direction: row;
+    }
+
+    .control-item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 30px;
+
+        @media (min-width: 768px) {
+            margin-top: 0;
+        }
+
+        &:first-of-type {
+            margin-top: 0;
+        }
+
+        label {
+            font-size: 20px;
+
+            @media (min-width: 992px) {
+                font-size: 30px;
+            }
+        }
+
+        input {
+            width: 100px;
+            margin-top: 20px;
+        }
+    }
+}
+
+
+
+#image {
+    width: 100%;
+    height: auto;
+    border: var(--spacing-image) solid var(--base-image);
+    filter: blur(var(--blur-image));
+    margin-top: 50px;
+    @media (min-width: 768px) {
+        width: 50%;
+    }
+}
